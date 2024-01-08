@@ -1,0 +1,103 @@
+:root {
+
+    --fuenteTitulo: 'Raleway', sans-serif;
+    --fuenteNormal: 'Roboto', sans-serif;
+    --tamañoNormal: 1.1rem;
+    --tituloTamaño: 2rem;
+    --tituloFondo: #ceedf1;
+    --grisclaro: #09090928;
+    --colorBotones: #04AA6D;
+    --hover: #46a049;
+    --blanco: #ffffff;
+
+}
+
+/**-----GLOBALES-----**/
+
+* {
+    box-sizing: content-box;
+    margin: auto;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to top, var(--blanco) 0%, var(--tituloFondo)100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    font-size: var(--tituloTamaño);
+    font-family: var(--fuenteTitulo);
+    text-align: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.button {
+    background-color: var(--colorBotones);
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.success:hover {
+    background-color: var(--hover);
+}
+
+
+/**-----Estilos de la pagina INDEX-----**/
+
+.contenedor {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.select {
+    background-color: var(--grisclaro);
+}
+
+.tabla {
+    margin: 3rem auto;
+    border: solid 1px;
+}
+
+.columnaTabla {
+    border: solid 1px;
+    font-size: var(--tamañoNormal);
+    font-family: var(--fuenteNormal);
+}
+
+.btnindex{
+    display: block;
+}
+
+/**-----Estilos de la pagina CLIENTES y CUENTA-----**/
+
+.contenedorForm{
+    max-width: min-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelForm{
+    font-family: var(--fuenteNormal);
+    font-size: var(--tamañoNormal);
+}
+
+.btnCC{
+    font-size: var(--tamañoNormal);
+    display: block;
+}

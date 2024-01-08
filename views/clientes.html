@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear cliente</title>
+    <link rel="stylesheet" href="css.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Poppins:wght@400;500;600&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Poppins:wght@400;500;600&family=Raleway:ital,wght@1,500&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="titulo">CLIENTES</h1>
+    </header>
+
+    <div class="contenedorForm">
+      <form method="post">
+        <!--nombre-->
+        <label class="labelForm">Nombre: </label>
+        <input id="nombre" type="text" placeholder="Ingrese el nombre" />
+        <!--APaterno-->
+        <label class="labelForm">Apellido paterno: </label>
+        <input id="apellidoPaterno" type="text" placeholder="Ingrese el apellido paterno"/>
+        <!--AMaterno-->
+        <label class="labelForm">Apellido materno</label>
+        <input
+          id="apellidoMaterno" type="text" placeholder="Ingrese el apellido materno" />
+        <!--Edad-->
+        <label class="labelForm">Edad: </label>
+        <input id="edad" type="number" placeholder="Ingrese la edad" />
+        <!--Sexo-->
+        <label class="labelForm">Sexo: </label>
+        <input id="sexo" type="text" placeholder="Ingrese el sexo" />
+        <!--CorreoElectronico-->
+        <label class="labelForm">Correo electronico: </label>
+        <input id="email" type="email" placeholder="Ingrese el correo electronico"/>
+        <!--CURP-->
+        <label class="labelForm">Curp: </label>
+        <input id="curp" type="text" placeholder="Ingrese el curp" />
+      </form>
+    </div>
+    <button
+      class="button success btnCC"
+      type="button"
+      onclick="location.href='./cuentas.html'"
+    >
+      Crear cuenta
+    </button>
+    <button
+      class="button success btnCC"
+      type="button"
+      onclick="location.href='./index.html'"
+    >
+      Regresar
+    </button>
+  </body>
+</html>
