@@ -101,3 +101,10 @@ body {
     font-size: var(--tamañoNormal);
     display: block;
 }
+
+.inputForm{
+    font-family: var(--fuenteNormal);
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    
+}

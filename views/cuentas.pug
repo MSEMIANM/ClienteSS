@@ -1,0 +1,13 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet', href='css.css')
+header.header
+  h1.titulo CLIENTES
+.contenedorForm
+  form(method='get')
+    label.labelForm Cuenta: 
+    input#inputCuenta.inputForm(type='number', placeholder='Ingresa la cuenta')
+    button.button.success.btnCC(type='button', onclick="location.href='./index'") Crear cuenta

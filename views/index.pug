@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='css.css')
+  header.header
+  h1.titulo CLIENTES
+main
+  .contenedor
+    select#clientesId.select(name='clientes')
+      option(value='')
+  table.tabla
+    tr
+      td.columnaTabla Nombre
+      td.columnaTabla Apellido Paterno
+      td.columnaTabla Apellido Materno
+      td.columnaTabla Edad
+      td.columnaTabla Sexo
+      td.columnaTabla Correo Electronico
+      td.columnaTabla CURP
+    tr
+      td
+      td
+      td
+      td
+      td
+      td
+      td
+  button.button.success.btnindex(type='button' onclick="location.href='./clientes'") Crear cliente

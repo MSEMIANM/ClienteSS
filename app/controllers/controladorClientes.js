@@ -1,7 +1,17 @@
 var modeloClietes = require("../models/modeloCliente");
 var clientes = new modeloClietes();
 
+function index(req, res) {
+  res.render("index");
+}
+
+function cuentas(req, res) {
+  res.render("cuentas");
+}
+
 function registrarCliente(req, res) {
+  res.render("clientes");
+
   //Metodo Post Registramos cliente en la base de datos
   var params = req.body; //Obtencion de datos por el metodo POST
   console.log(params);
@@ -46,7 +56,7 @@ function registrarCliente(req, res) {
               sexo: clienteAlmacenado.sexo,
               correoElectronico: clienteAlmacenado.correoElectronico,
               curp: clienteAlmacenado.curp,
-            }
+            },
           ]);
           console.log("Cliente almacenado");
         }
@@ -56,24 +66,31 @@ function registrarCliente(req, res) {
 }
 
 const buscarCliente = async function (req, res) {
-  const clientenombre = req.params.id;//Obtencion de datos por el metodo GET
+  const clientenombre = req.params.id; //Obtencion de datos por el metodo GET
   try {
     const cliente = await modeloClietes.findById(clientenombre); //Consulta pra la obtencion de datos en el modelo
     if (cliente) {
-      res.status(200).send({ data: cliente });//Nos devuelve los datos del id buscado
-      console("datos obtenidos")
+      res.status(200).send({ data: cliente }); //Nos devuelve los datos del id buscado con formato json
+      console("datos obtenidos");
       //Errores
     } else {
-      res.status(404).send({ data: undefined, mesagge: "Cliente no encontrado" });
+      res
+        .status(404)
+        .send({ data: undefined, mesagge: "Cliente no encontrado" });
     }
   } catch (error) {
-    res.status(500).send({ data: undefined, mesagge: "Error al obtener los datos" });
-      console.log("datos no obtenidos")
+    res
+      .status(500)
+      .send({ data: undefined, mesagge: "Error al obtener los datos" });
+    console.log("datos no obtenidos");
   }
 };
 
-//Exportacion de modulos 
+//Exportacion de modulos
 module.exports = {
   registrarCliente,
-  buscarCliente
+  buscarCliente,
+  index,
+  clientes,
+  cuentas,
 };

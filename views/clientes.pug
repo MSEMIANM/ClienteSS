@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Crear cliente
+  link(rel='stylesheet', href='css.css')
+header.header
+  h1.titulo CLIENTES
+.contenedorForm
+  form(method='get')
+    // nombre
+    label.labelForm Nombre: 
+    input#nombre.inputForm(type='text', placeholder='Ingrese el nombr', maxlength='16')
+    // APaterno
+    label.labelForm Apellido paterno: 
+    input#apellidoPaterno.inputForm(type='text', placeholder='Ingrese el apellido paterno')
+    // AMaterno
+    label.labelForm Apellido materno
+    input#apellidoMaterno.inputForm(type='text', placeholder='Ingrese el apellido materno')
+    // Edad
+    label.labelForm Edad: 
+    input#edad.inputForm(type='number', placeholder='Ingrese la edad')
+    // Sexo
+    label.labelForm Sexo: 
+    input#sexo.inputForm(type='text', placeholder='Ingrese el sexo')
+    // CorreoElectronico
+    label.labelForm Correo electronico: 
+    input#email.inputForm(type='email', placeholder='Ingrese el correo electronico')
+    // CURP
+    label.labelForm Curp: 
+    input#curp.inputForm(type='text', placeholder='Ingrese el curp')
+button.button.success.btnCC(type='button', onclick="location.href='./cuentas'") Crear cuenta
+button.button.success.btnCC(type='button', onclick="location.href='./index'") Regresar

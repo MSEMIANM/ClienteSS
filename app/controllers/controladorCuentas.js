@@ -10,10 +10,10 @@ function registrarCuentas(req, res) {
   if (cuentas.cuenta != null ) {
     cuentas.save((err, cuenta_Almacenada) => {
       if (err) {
-        if (res.status(500).send({ mesagge: "Error al guardar el cliente"}));
+        if (res.status(500).send({ mesagge: "Error al guardar la cuenta"}));
       } else {
         if (!cuenta_Almacenada) {
-          res.status(404).send({ mesagge: "No se ha registrado el cliente" });
+          res.status(404).send({ mesagge: "No se ha registrado la cuentas" });
         } else {
           res.status(200).send([
             {

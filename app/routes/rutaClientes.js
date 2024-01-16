@@ -1,11 +1,12 @@
 "use strict";
 var express = require("express");
+var api = express.Router();
 var controladorClientes = require("../controllers/controladorClientes");
 var controladorCuenta = require("../controllers/controladorCuentas");
-var api = express.Router();
 
-api.post("/registrarCliente", controladorClientes.registrarCliente);
-api.post("/registrarCuenta", controladorCuenta.registrarCuentas);
+api.get("/index", controladorClientes.index);
+api.get("/clientes", controladorClientes.registrarCliente );
+api.get("/cuentas", controladorClientes.cuentas);
 api.get("/buscar/:id", controladorClientes.buscarCliente);
 
 module.exports = api;
